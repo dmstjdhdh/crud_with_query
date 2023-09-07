@@ -1,6 +1,6 @@
 # CRUD Web Application with Query
 
-This is a simple CRUD (Create, Read, Update, Delete) web application built using [insert tech stack or framework]. It allows you to perform basic database operations on [describe what kind of data the application manages].
+<img src = "https://github.com/dmstjdhdh/crud_with_query/assets/71542970/8d87b1a0-eaaf-4b7b-9ec8-c62afa81a690">
 
 ## Table of Contents
 - [Installation](#installation)
