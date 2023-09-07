@@ -1,4 +1,4 @@
-# CRUD Web Application with Query 개인 공부용
+# CRUD Web Application with Query 개인 공부용 (Conclusion까지 진행단계)
 
 <img src = "https://github.com/dmstjdhdh/crud_with_query/assets/71542970/8d87b1a0-eaaf-4b7b-9ec8-c62afa81a690">
 
