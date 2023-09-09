@@ -1,8 +1,8 @@
-import postUrl from "./baseUrl.ts";
+import {postUrl} from "./baseUrl.ts";
 import {useQuery} from "@tanstack/react-query";
 import {Post} from "../types/Post.ts";
 
-const getPostDetail = async (id: string) => {
+const getPostDetail = async (id:string) => {
     const {data} = await postUrl.get(`/${id}`)
     return data.data
 }

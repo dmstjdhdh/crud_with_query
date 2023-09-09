@@ -1,4 +1,4 @@
-import postUrl from "./baseUrl.ts";
+import {postUrl} from "./baseUrl.ts";
 import {useMutation, useQueryClient} from "@tanstack/react-query";
 import {Post} from "../types/Post.ts";
 
@@ -7,7 +7,7 @@ const postPostCreate = async (post:Post) => {
     return data.data
 }
 
-const usePostPostCreate = () => {
+const usePostPostCreate = () =>{
     const queryClient = useQueryClient()
     return useMutation({
         mutationFn: (post: Post) => postPostCreate(post),

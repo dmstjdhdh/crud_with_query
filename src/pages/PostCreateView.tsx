@@ -15,8 +15,8 @@ const PostCreateView = () => {
             image: values.image
         }
         console.log(newPost)
-        await mutateAsync(newPost)
-        navigate("/")
+        // await mutateAsync(newPost)
+        // navigate("/")
     }
 
     return (

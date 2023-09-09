@@ -4,4 +4,7 @@ const postUrl = axios.create({
     baseURL: "http://localhost:8000/api/post"
 })
 
-export default postUrl
+const authUrl = axios.create({
+    baseURL: "http://localhost:8000/api/auth"
+})
+export {authUrl, postUrl}
