@@ -1,8 +1,8 @@
 import {authUrl} from "./baseUrl.ts";
 import {useMutation, useQueryClient} from "@tanstack/react-query";
-import {Signup} from "../types/Signup.ts";
+import {User} from "../types/User.ts";
 
-const signUpHandler = async (signup:Signup) => {
+const signUpHandler = async (signup:User) => {
     const {data} = await authUrl.post("/signup", signup)
     return data.data
 }
@@ -10,11 +10,14 @@ const signUpHandler = async (signup:Signup) => {
 const useSignUpHandler = () => {
     const queryClient = useQueryClient()
     return useMutation({
-        mutationFn: (signUp:Signup) => signUpHandler(signUp),
+        mutationFn: (signUp:User) => signUpHandler(signUp),
         onSuccess: () => {
             queryClient.invalidateQueries({
                 queryKey: ['user']
             })
+        },
+        onError: (err) => {
+            console.log(err)
         }
     })
 }

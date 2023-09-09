@@ -3,7 +3,13 @@ import {useMutation, useQueryClient} from "@tanstack/react-query";
 import {Post} from "../types/Post.ts";
 
 const postPostCreate = async (post:Post) => {
-    const {data} = await postUrl.post("/", post)
+    const token = localStorage.getItem("token")
+    const config = {
+        headers: {
+            Authorization: "bearer " + token
+        }
+    }
+    const {data} = await postUrl.post("/", post, config)
     return data.data
 }
 
